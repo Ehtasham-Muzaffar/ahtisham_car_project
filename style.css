@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#game{
+    
+        height: 500px;
+        width: 390px;
+        border: 1px solid black;
+        margin: 1rem auto;
+        background:url(bg.jpg) ;
+        background-size: contain;
+        overflow: hidden;
+    
+}
+#bluecar{
+    width: 100px;
+    background-color: bisque;
+    height: 100px;
+    text-align: center;
+    position: relative;
+    top: 0;
+   left:0;
+   animation: move 1s linear infinite;
+
+
+}
+#redcar{
+    width: 100px;
+    text-align: center;
+    height: 100px;
+    position: relative;
+    top: 250px;
+    left: 130px; 
+    background-color: brown;
+}
+#redcar img{
+    height: 100px;
+}
+@keyframes move{
+    0%{
+        top: 0;
+    }
+    100%{
+        top:100%
+    }
+}
+
+#bluecar img{
+    height: 100px;
+}
