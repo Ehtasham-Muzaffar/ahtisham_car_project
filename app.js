@@ -3,7 +3,24 @@ var redcar = document.getElementById("redcar")
 var bluecar=document.getElementById("bluecar")
 var score=document.getElementById("score")
 var count=0
+var left =document.getElementById("left")
+var right=document.getElementById("right")
 var box2= document.getElementById("box2")
+
+
+
+right.addEventListener("click",()=>{
+    var racecar=parseInt(this.window.getComputedStyle(redcar).getPropertyValue("left"))
+    if(racecar < 260){
+        redcar.style.left= (racecar + 130) + "px"}    
+})
+left.addEventListener("click",()=>{
+    var racecar=parseInt(this.window.getComputedStyle(redcar).getPropertyValue("left"))
+    if(racecar > 0){
+        redcar.style.left= (racecar - 130) + "px"
+        }
+})
+
 
 window.addEventListener("keydown",function(e){
     
@@ -50,4 +67,4 @@ setTimeout(()=>{
 bluecar.style.animationDuration= `${0.7}s`
 },180000)
 
-debugger;
+// debugger;
