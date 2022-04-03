@@ -3,6 +3,8 @@ var redcar = document.getElementById("redcar")
 var bluecar=document.getElementById("bluecar")
 var score=document.getElementById("score")
 var count=0
+var box2= document.getElementById("box2")
+
 window.addEventListener("keydown",function(e){
     
     if(e.keyCode == "39"){
@@ -35,6 +37,7 @@ setInterval(() => {
     
         if((blueleft==redcarleft) && (bluecartop > 270) && (bluecartop < 480)){
         game.style.display="none"
+        box2.style.display="block"
         
         count=0
 
@@ -46,3 +49,5 @@ setInterval(() => {
 setTimeout(()=>{
 bluecar.style.animationDuration= `${0.7}s`
 },180000)
+
+debugger;
